@@ -1,0 +1,40 @@
+# This template merge config file lists:
+#
+# - name: name of template stuff
+# - patterns: strings to do text substitution on
+# - rev_id: a sequential revision id of the template repo (manually maintained for now)
+# - required: a full list of all files always merged
+# - optional: a full list of all files merged when the --optional flag is used with `gut template`
+# - ignored: never used in merging, only when populating new repos
+
+name = "Keyboard Template"
+patterns = ["mpu", "mpu", "Makuráp", "GPLv3"]
+rev_id = 23
+required = [".gitignore",
+            ".github/workflows/docsygen.yml",
+            ".taskcluster.yml",
+            "Makefile.am",
+            "autogen.sh",
+            "configure.ac",
+            "docs/_config.yml",
+            "docs/_includes/toc.html",
+            "docs/_layouts/default.html",
+            "docs/assets/css/style.scss"]
+
+optional = [".github/workflows/build.yml",
+            "AUTHORS",
+            "README.md",
+            "mpu.kbdgen/layouts/mpu.yaml",
+            "mpu.kbdgen/layouts/en.yaml",
+            "mpu.kbdgen/project.yaml",
+            "mpu.kbdgen/resources/mac/background.png",
+            "mpu.kbdgen/resources/mac/icon.mpu.png",
+            "mpu.kbdgen/resources/mac/readme.html",
+            "mpu.kbdgen/targets/android.yaml",
+            "mpu.kbdgen/targets/ios.yaml",
+            "mpu.kbdgen/targets/mac.yaml",
+            "mpu.kbdgen/targets/win.yaml",
+            "docs/index.md",
+            "docs/layout.md"]
+
+ignored  = ["LICENSE"]
